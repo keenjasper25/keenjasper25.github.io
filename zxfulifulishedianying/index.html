@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zxfuli福利社电影-独立观影清单与选片指南</title>
+<meta name="description" content="zxfuli福利社电影是围绕独立片、修复版与冷门资源的观影选片手册。每周整理可追溯的放映时间、版本差异、片单取舍与观影顺序，附评论区实评与常见问题，帮你在有限时间里挑到真正合适的片子。">
+<meta name="keywords" content="zxfuli福利社电影">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2433'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23f2b84b' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23f2b84b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2433;
+  --ink-2:#2c3648;
+  --muted:#5c6779;
+  --line:#dfe3ea;
+  --paper:#f6f5f1;
+  --card:#ffffff;
+  --brand:#1b2433;
+  --accent:#c9482f;
+  --gold:#f2b84b;
+  --teal:#2c7a6f;
+  --r-s:6px;
+  --r-m:12px;
+  --r-l:20px;
+  --sh-s:0 1px 2px rgba(27,36,51,.08);
+  --sh-m:0 6px 18px rgba(27,36,51,.09);
+  --sp-1:6px;--sp-2:12px;--sp-3:18px;--sp-4:28px;--sp-5:44px;--sp-6:64px;
+  --fs-h1:clamp(28px,4.4vw,46px);
+  --fs-h2:clamp(21px,2.4vw,28px);
+  --fs-h3:17px;
+  --fs-body:16px;
+  --fs-s:14px;
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --sticky:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky)}
+body{
+  margin:0;font-family:var(--font);font-size:var(--fs-body);line-height:1.75;
+  color:var(--ink);background:var(--paper);
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 var(--sp-2)}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.25em}
+li{margin-bottom:4px}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+
+.sticky-wrap{position:sticky;top:0;z-index:50}
+.announce{
+  background:var(--brand);color:#e8e3d8;font-size:13px;letter-spacing:.2px;
+  padding:7px 16px;display:flex;gap:10px;align-items:center;justify-content:center;
+  border-bottom:1px solid rgba(255,255,255,.12);text-align:center;
+}
+.announce b{color:var(--gold);font-weight:600}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.site-head{
+  background:rgba(246,245,241,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);box-shadow:var(--sh-s);
+}
+.head-inner{
+  max-width:1180px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+.brand:hover{text-decoration:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-name{font-weight:700;font-size:17px;letter-spacing:.3px;white-space:nowrap}
+.brand-sub{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:.4px}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.nav a{
+  color:var(--ink-2);font-size:14px;padding:7px 10px;border-radius:var(--r-s);
+  white-space:nowrap;
+}
+.nav a:hover{background:#ebe8e0;text-decoration:none}
+.menu-btn{
+  display:none;margin-left:auto;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-s);padding:7px 12px;font-size:14px;cursor:pointer;color:var(--ink);
+}
+.menu-btn:focus-visible,.nav a:focus-visible,.search input:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.search{margin-left:8px;position:relative}
+.search input{
+  width:190px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+  font-size:13px;background:var(--card);color:var(--ink);
+}
+.search input::placeholder{color:#98a1b0}
+.search-result{
+  position:absolute;top:calc(100% + 8px);right:0;width:280px;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--r-m);box-shadow:var(--sh-m);
+  padding:10px;font-size:13px;display:none;z-index:60;max-height:300px;overflow:auto;
+}
+.search-result.show{display:block}
+.search-result a{display:block;padding:5px 6px;border-radius:var(--r-s);color:var(--ink-2)}
+.search-result a:hover{background:#f1eee7;text-decoration:none}
+.search-result .empty{color:var(--muted);padding:6px}
+
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#1b2433 0%,#243247 58%,#2c3a51 100%);
+  color:#f2efe8;
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:var(--sp-6) 20px var(--sp-5);
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;
+  position:relative;z-index:2;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;
+  color:var(--gold);border:1px solid rgba(242,184,75,.45);border-radius:999px;
+  padding:4px 12px;margin-bottom:18px;
+}
+.hero h1{font-size:var(--fs-h1);letter-spacing:1px;color:#fff;margin-bottom:16px}
+.hero-lead{font-size:16px;color:#cfd6e2;max-width:34em;margin-bottom:24px}
+.hero-lead strong{color:#fff;font-weight:600}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;font-size:14px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:transform .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-main{background:var(--gold);color:#1b2433}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#f2efe8}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);padding-top:18px}
+.hero-stats div span{display:block;font-size:22px;font-weight:700;color:var(--gold)}
+.hero-stats div em{font-style:normal;font-size:12px;color:#a9b3c4;letter-spacing:.5px}
+.hero-art{position:relative;width:100%;max-width:440px;justify-self:center}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35))}
+.hero-grain{
+  position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+
+.layout{
+  max-width:1180px;margin:0 auto;padding:var(--sp-5) 20px var(--sp-6);
+  display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:44px;
+}
+main{min-width:0}
+aside{min-width:0}
+
+.sec{margin-bottom:var(--sp-6)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head h2{font-size:var(--fs-h2)}
+.sec-head .note{font-size:13px;color:var(--muted)}
+.sec-kicker{
+  font-size:12px;letter-spacing:1.4px;color:var(--teal);font-weight:700;
+  display:block;margin-bottom:4px;
+}
+.sec > p.intro{color:var(--ink-2);max-width:64ch;margin-bottom:20px}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:20px;box-shadow:var(--sh-s);
+}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+
+.overview{
+  background:linear-gradient(180deg,#fff 0%,#fbfaf6 100%);
+  border:1px solid var(--line);border-radius:var(--r-l);padding:26px;
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:26px;
+}
+.overview h2{font-size:var(--fs-h2);margin-bottom:10px}
+.overview .meta-src{font-size:12px;color:var(--muted);margin-top:10px}
+.mini-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.mini-table th,.mini-table td{text-align:left;padding:7px 6px;border-bottom:1px dashed var(--line)}
+.mini-table th{color:var(--muted);font-weight:600;white-space:nowrap}
+.mini-table td.num{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
+
+.pick{
+  display:flex;gap:14px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-m);padding:14px;box-shadow:var(--sh-s);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.pick:hover{transform:translateY(-3px);box-shadow:var(--sh-m)}
+.pick img{width:96px;height:128px;object-fit:cover;border-radius:var(--r-s);flex:none;background:#e6e2d8}
+.pick .pick-body{min-width:0}
+.pick h3{font-size:15px;margin-bottom:4px}
+.pick .pick-meta{font-size:12px;color:var(--muted);margin-bottom:6px;letter-spacing:.3px}
+.pick p{font-size:13px;color:var(--ink-2);margin-bottom:6px;line-height:1.6}
+.pick .tag{font-size:11px;color:var(--teal);border:1px solid #bfd9d3;border-radius:999px;padding:1px 8px}
+
+.updates{list-style:none;padding:0;margin:0}
+.updates li{
+  display:grid;grid-template-columns:88px 1fr;gap:14px;padding:11px 0;
+  border-bottom:1px solid var(--line);
+}
+.updates li:last-child{border-bottom:none}
+.updates time{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
+.updates strong{font-size:14.5px;display:block;color:var(--ink)}
+.updates span{font-size:13px;color:var(--ink-2)}
+
+.channels{display:flex;flex-wrap:wrap;gap:10px}
+.channels a{
+  display:inline-flex;align-items:center;gap:6px;background:var(--card);
+  border:1px solid var(--line);border-radius:999px;padding:8px 15px;
+  font-size:13.5px;color:var(--ink-2);box-shadow:var(--sh-s);
+}
+.channels a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.channels .cnt{font-size:11px;color:var(--muted)}
+
+.deep{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);
+  padding:clamp(20px,3vw,34px);box-shadow:var(--sh-s);
+}
+.deep h2{font-size:var(--fs-h2);margin-bottom:6px}
+.deep .byline{font-size:12.5px;color:var(--muted);margin-bottom:20px}
+.deep h3{font-size:var(--fs-h3);margin:24px 0 8px;color:var(--ink);border-left:4px solid var(--gold);padding-left:10px}
+.deep p{color:var(--ink-2)}
+.deep .fact{
+  background:#f7f3e7;border:1px solid #eadfc2;border-radius:var(--r-m);
+  padding:14px 16px;font-size:14px;margin:14px 0;
+}
+.deep .fact b{color:#8a6a12}
+.deep blockquote{
+  margin:16px 0;padding:12px 18px;border-left:3px solid var(--teal);
+  background:#f2f8f6;color:#2a4a44;font-size:14.5px;border-radius:0 var(--r-s) var(--r-s) 0;
+}
+.checklist{counter-reset:step;list-style:none;padding:0}
+.checklist li{
+  counter-increment:step;position:relative;padding-left:40px;margin-bottom:14px;
+  font-size:14.5px;color:var(--ink-2);
+}
+.checklist li::before{
+  content:counter(step);position:absolute;left:0;top:1px;width:26px;height:26px;
+  border-radius:50%;background:var(--brand);color:var(--gold);font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+
+.compare{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0 14px}
+.compare th,.compare td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.compare th{background:#efece4;font-weight:600;font-size:13px;color:var(--ink-2)}
+.compare td.yes{color:var(--teal);font-weight:600}
+.compare td.no{color:var(--accent)}
+
+.faq details{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  margin-bottom:10px;box-shadow:var(--sh-s);
+}
+.faq summary{
+  cursor:pointer;padding:14px 18px;font-weight:600;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:18px;color:var(--accent);flex:none;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{border-bottom:1px solid var(--line)}
+.faq .ans{padding:14px 18px;font-size:14px;color:var(--ink-2)}
+
+.comments{display:grid;gap:12px}
+.comment{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:14px 16px;font-size:14px;color:var(--ink-2);box-shadow:var(--sh-s);
+}
+.comment .who{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12.5px;color:var(--muted)}
+.comment .avatar{
+  width:24px;height:24px;border-radius:50%;background:#e6e2d8;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink-2);font-weight:700;
+}
+.comment .ref{color:var(--teal);font-size:12.5px;font-weight:600}
+.comment.neg{border-color:#e8cdc5;background:#fdf6f4}
+
+.news{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.news li{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:13px 16px;font-size:14px;color:var(--ink-2);
+}
+.news li b{color:var(--ink)}
+.news time{font-size:12px;color:var(--muted);margin-right:8px;font-variant-numeric:tabular-nums}
+
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  font-size:13.5px;background:#fff;border:1px dashed #ccc4b4;border-radius:var(--r-s);
+  padding:7px 13px;color:var(--ink-2);
+}
+.rec-tags a:hover{border-style:solid;border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding-left:30px;margin-bottom:16px;font-size:14px;color:var(--ink-2)}
+.timeline li::before{
+  content:"";position:absolute;left:2px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:var(--card);border:3px solid var(--gold);box-sizing:border-box;
+}
+.timeline b{display:block;color:var(--ink);font-size:14.5px}
+.timeline time{font-size:12px;color:var(--muted)}
+
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:18px;box-shadow:var(--sh-s);margin-bottom:18px;
+}
+.side-card h3{font-size:14px;letter-spacing:.5px;margin-bottom:10px;color:var(--ink)}
+.side-nav{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-nav a{
+  display:block;padding:6px 8px;border-left:2px solid transparent;color:var(--ink-2);
+  border-radius:0 var(--r-s) var(--r-s) 0;
+}
+.side-nav a:hover{background:#f1eee7;text-decoration:none}
+.side-nav a.active{border-left-color:var(--accent);background:#f6efe9;color:var(--accent);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.side-list li:last-child{border-bottom:none}
+.side-list a{color:var(--ink-2)}
+.side-list a:hover{color:var(--accent)}
+.side-list small{display:block;color:var(--muted);font-size:11.5px}
+.rank-list{counter-reset:r;list-style:none;padding:0;margin:0;font-size:13.5px}
+.rank-list li{counter-increment:r;padding:7px 0 7px 28px;position:relative;border-bottom:1px dashed var(--line)}
+.rank-list li:last-child{border-bottom:none}
+.rank-list li::before{
+  content:counter(r);position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:4px;
+  background:#efece4;color:var(--ink-2);font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.rank-list li:nth-child(1)::before{background:var(--gold);color:var(--brand)}
+
+.site-foot{
+  background:var(--brand);color:#c8cfdb;font-size:13.5px;
+  border-top:4px solid var(--gold);
+}
+.foot-inner{max-width:1180px;margin:0 auto;padding:var(--sp-5) 20px var(--sp-4)}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:28px;margin-bottom:30px}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:16px;margin-bottom:10px}
+.foot-brand svg{width:32px;height:32px;flex:none}
+.site-foot p{color:#a6b0c0;font-size:13px;line-height:1.7}
+.site-foot h4{font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:10px}
+.foot-links{list-style:none;padding:0;margin:0;font-size:13px}
+.foot-links li{margin-bottom:6px}
+.foot-links a{color:#c8cfdb}
+.foot-links a:hover{color:#fff}
+.foot-note{
+  border-top:1px solid rgba(255,255,255,.14);padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#8f9aab;
+}
+
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:80;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);font-size:18px;cursor:pointer;
+  box-shadow:var(--sh-m);display:none;align-items:center;justify-content:center;
+}
+.to-top.show{display:flex}
+.to-top:hover{background:var(--gold);border-color:var(--gold)}
+
+@media (max-width:1080px){
+  .layout{grid-template-columns:minmax(0,1fr) 250px;gap:30px}
+  .hero-inner{grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:26px}
+}
+@media (max-width:900px){
+  :root{--sticky:100px}
+  .hero-inner{grid-template-columns:1fr;padding-top:var(--sp-5)}
+  .hero-art{max-width:320px;order:-1;justify-self:start}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .overview{grid-template-columns:1fr}
+  .layout{grid-template-columns:1fr}
+  aside{order:2}
+  main{order:1}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .nav{
+    display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);
+    flex-direction:column;padding:10px 16px 16px;border-bottom:1px solid var(--line);
+    box-shadow:var(--sh-m);margin:0;
+  }
+  .nav.open{display:flex}
+  .nav a{padding:10px 6px;border-bottom:1px dashed var(--line)}
+  .site-head{position:relative}
+  .menu-btn{display:block}
+  .search{margin-left:0;width:100%;order:5;flex-basis:100%}
+  .search input{width:100%}
+  .search-result{left:0;right:auto;width:100%}
+  .head-inner{gap:10px;padding:10px 16px}
+  .brand-name{font-size:15px}
+}
+@media (max-width:600px){
+  :root{--sticky:96px}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .layout{padding-left:14px;padding-right:14px;gap:20px}
+  .hero-inner{padding-left:16px;padding-right:16px}
+  .foot-top{grid-template-columns:1fr;gap:20px}
+  .updates li{grid-template-columns:1fr;gap:2px}
+  .pick img{width:76px;height:104px}
+  .announce{font-size:11.5px;padding:6px 10px;flex-wrap:wrap}
+  .to-top{right:12px;bottom:12px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .pick:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce" id="announce">
+    <span class="dot" aria-hidden="true"></span>
+    <span>zxfuli福利社电影 11月7日更新：<b>《雾港旧事》4K修复版</b>新增粤语原声轨，场次从 3 场加到 6 场；11月片单页同步补入 12 条放映备注。</span>
+  </div>
+  <header class="site-head">
+    <div class="head-inner">
+      <a class="brand" href="/#top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2433"/>
+          <circle cx="32" cy="32" r="15" fill="none" stroke="#f2b84b" stroke-width="4"/>
+          <circle cx="32" cy="32" r="5" fill="#f2b84b"/>
+          <path d="M32 12v6M32 46v6M12 32h6M46 32h6" stroke="#c9482f" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">zxfuli福利社电影<span class="brand-sub">选片 · 版本 · 场次</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">导航菜单</button>
+      <nav class="nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选片单</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">影迷评论</a>
+      </nav>
+      <div class="search">
+        <label for="siteSearch" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">站内搜索</label>
+        <input type="search" id="siteSearch" placeholder="搜片名、导演、版本…" autocomplete="off">
+        <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">独立观影 · 每周三更新</span>
+      <h1>zxfuli福利社电影</h1>
+      <p class="hero-lead">把“值不值得看”拆成可核对的几件事：<strong>放映场次、版本差别、字幕来源、修复质量</strong>。11月档正在整理的 38 部片子里，有 9 部同时存在两个以上版本，选错版本比选错片子更耽误时间。</p>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="/#picks">看本周精选片单</a>
+        <a class="btn btn-ghost" href="/#deep">读版本对比解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><span>38</span><em>在映与待映条目</em></div>
+        <div><span>9</span><em>多版本并存</em></div>
+        <div><span>11月7日</span><em>片单核对时间</em></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="img">
+        <defs>
+          <linearGradient id="reelGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f2b84b"/>
+            <stop offset="1" stop-color="#c9482f"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="26" width="384" height="238" rx="14" fill="#131a27" stroke="#3a465c"/>
+        <circle cx="106" cy="128" r="62" fill="none" stroke="url(#reelGrad)" stroke-width="9"/>
+        <circle cx="106" cy="128" r="17" fill="#f2b84b"/>
+        <circle cx="106" cy="76" r="9" fill="#131a27" stroke="#f2b84b" stroke-width="4"/>
+        <circle cx="152" cy="128" r="9" fill="#131a27" stroke="#f2b84b" stroke-width="4"/>
+        <circle cx="106" cy="180" r="9" fill="#131a27" stroke="#f2b84b" stroke-width="4"/>
+        <circle cx="60" cy="128" r="9" fill="#131a27" stroke="#f2b84b" stroke-width="4"/>
+        <rect x="196" y="72" width="176" height="14" rx="7" fill="#3a465c"/>
+        <rect x="196" y="102" width="140" height="14" rx="7" fill="#2d3a4f"/>
+        <rect x="196" y="132" width="158" height="14" rx="7" fill="#2d3a4f"/>
+        <rect x="196" y="162" width="112" height="14" rx="7" fill="#c9482f" opacity=".75"/>
+        <rect x="196" y="192" width="150" height="10" rx="5" fill="#3a465c"/>
+        <rect x="196" y="212" width="96" height="10" rx="5" fill="#3a465c"/>
+        <g transform="translate(34,282)">
+          <rect width="120" height="30" rx="15" fill="#22314a" stroke="#3a465c"/>
+          <text x="60" y="20" font-family="sans-serif" font-size="12" fill="#9fb0c9" text-anchor="middle">4K 修复</text>
+        </g>
+        <g transform="translate(166,282)">
+          <rect width="120" height="30" rx="15" fill="#22314a" stroke="#3a465c"/>
+          <text x="60" y="20" font-family="sans-serif" font-size="12" fill="#9fb0c9" text-anchor="middle">粤语原声</text>
+        </g>
+        <g transform="translate(298,282)">
+          <rect width="88" height="30" rx="15" fill="#22314a" stroke="#3a465c"/>
+          <text x="44" y="20" font-family="sans-serif" font-size="12" fill="#9fb0c9" text-anchor="middle">35mm</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+  <main>
+
+    <section class="sec" id="overview">
+      <div class="overview">
+        <div>
+          <span class="sec-kicker">DOMAIN OVERVIEW</span>
+          <h2>领域概览：一部片子在流通中会变成几个版本</h2>
+          <p>同一部电影进入放映渠道，通常要过三道关：版权方提供的母版规格、发行方加的字幕与配音、影院实际使用的放映参数。11月5日核对到的《雪线以南》就分 2K 数字拷贝和 35mm 扫描版两种，画面比例一个 1.85:1、一个 1.66:1，片尾字幕长度相差 41 秒。</p>
+          <p>选片时先确认版本，再谈口碑。放映渠道公开的场次备注里，标注“原版无删减”和“导演剪辑”的条目在 38 部片中占 11 部；其余多数为标准院线版。字幕来源在片单备注里单独列出，机翻字幕会被直接标红。</p>
+          <p class="meta-src">数据口径：11月1日至11月7日各放映渠道公开场次表，共 38 部、126 个场次。</p>
+        </div>
+        <div>
+          <table class="mini-table">
+            <caption class="note" style="text-align:left;font-size:12px;color:var(--muted);padding-bottom:6px">11月多版本条目抽样</caption>
+            <thead>
+              <tr><th>片名</th><th>版本数</th><th>关键差异</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>雾港旧事</td><td class="num">2</td><td>4K修复 / 35mm</td></tr>
+              <tr><td>雪线以南</td><td class="num">2</td><td>画幅 + 片尾 41 秒</td></tr>
+              <tr><td>夜班电车</td><td class="num">2</td><td>国语 / 粤语原声</td></tr>
+              <tr><td>第三码头</td><td class="num">3</td><td>院线 / 导剪 / 电视版</td></tr>
+              <tr><td>春分之后</td><td class="num">2</td><td>字幕组不同</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="picks">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">EDITOR'S PICKS</span>
+          <h2>精选片单：本周值得排进日程的六部</h2>
+        </div>
+        <span class="note">按“版本清晰度 + 场次密度”排序</span>
+      </div>
+      <p class="intro">入选标准写在片名后面：版本备注交代清楚的优先，场次少于 2 场的不进主推荐，只在最新更新里列出。以下六部在 11月7日均有余票。</p>
+      <div class="grid-3">
+        <article class="pick">
+          <img src="https://picsum.photos/seed/wugang/200/266" width="200" height="266" loading="lazy" alt="《雾港旧事》4K修复版海报，雨夜码头与灯柱" style="object-fit:cover">
+          <div class="pick-body">
+            <h3>雾港旧事 4K修复版</h3>
+            <div class="pick-meta">修复 · 118分钟 · 粤语原声</div>
+            <p>11月7日新增粤语轨，此前只有国语配音。胶片颗粒保留得比较完整，暗部没有明显糊成一片。</p>
+            <span class="tag">版本最清楚</span>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/xueshan/200/266" width="200" height="266" loading="lazy" alt="《雪线以南》剧照，雪山脚下的公路与货车" style="object-fit:cover">
+          <div class="pick-body">
+            <h3>雪线以南</h3>
+            <div class="pick-meta">剧情 · 104分钟 · 1.66:1</div>
+            <p>35mm 扫描版的画幅更接近当年放映比例，片尾多出 41 秒静帧。数字版把这段剪掉了。</p>
+            <span class="tag">画幅差异</span>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/yeban/200/266" width="200" height="266" loading="lazy" alt="《夜班电车》剧照，深夜车厢内昏黄灯光" style="object-fit:cover">
+          <div class="pick-body">
+            <h3>夜班电车</h3>
+            <div class="pick-meta">悬疑 · 96分钟 · 双语音轨</div>
+            <p>国语版把两处方言台词改写了，语义有偏移。想听原话的选粤语轨，字幕行数多 7 行。</p>
+            <span class="tag">音轨取舍</span>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/disanmatou/200/266" width="200" height="266" loading="lazy" alt="《第三码头》剧照，集装箱与清晨雾气" style="object-fit:cover">
+          <div class="pick-body">
+            <h3>第三码头</h3>
+            <div class="pick-meta">剧情 · 132分钟 · 导演剪辑版</div>
+            <p>三个版本里导剪版多出 18 分钟码头调度段落，院线版把这条线压到 4 分钟，人物动机明显变薄。</p>
+            <span class="tag">导剪优先</span>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/chunfen/200/266" width="200" height="266" loading="lazy" alt="《春分之后》剧照，老式居民楼阳台与晾衣绳" style="object-fit:cover">
+          <div class="pick-body">
+            <h3>春分之后</h3>
+            <div class="pick-meta">家庭 · 88分钟 · 中英字幕</div>
+            <p>两部字幕组版本并存，差异集中在老年角色称谓上。11月6日场次备注已注明字幕组编号。</p>
+            <span class="tag">字幕可查</span>
+          </div>
+        </article>
+        <article class="pick">
+          <img src="https://picsum.photos/seed/liangdeng/200/266" width="200" height="266" loading="lazy" alt="《两盏灯》剧照，夜间窗台与台灯" style="object-fit:cover">
+          <div class="pick-body">
+            <h3>两盏灯</h3>
+            <div class="pick-meta">短片集 · 74分钟 · 五部合辑</div>
+            <p>五部短片的放映顺序与去年影展版不同，第三部换成了《渡口》的 12 分钟版本。合辑场次每晚 1 场。</p>
+            <span class="tag">顺序有变</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="updates">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">LATEST UPDATES</span>
+          <h2>最新更新：场次、音轨与字幕变动</h2>
+        </div>
+        <span class="note">11月1日 — 11月7日</span>
+      </div>
+      <ul class="updates">
+        <li>
+          <time datetime="2026-11-07">11月7日</time>
+          <div><strong>《雾港旧事》粤语原声场上线</strong><span>场次由 3 场增至 6 场，其中 2 场带映后 20 分钟修复说明，主讲为修复团队的字幕校对。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div><strong>《春分之后》字幕组编号公示</strong><span>放映备注开始标注 A/B 两组字幕，A 组把“叔公”译作“uncle”，B 组保留方言拼写。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11月5日</time>
+          <div><strong>《雪线以南》35mm 扫描版加映</strong><span>本周仅 2 场，均在晚间。数字版照常 4 场，两个版本不共用影厅。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-04">11月4日</time>
+          <div><strong>《夜班电车》国语版台词修订说明发布</strong><span>发行方列出 2 处方言改写，第 47 分钟与第 78 分钟各一处，理由为“便于普适理解”。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11月3日</time>
+          <div><strong>《两盏灯》合辑第三部替换</strong><span>原收录的《潮间带》因版权到期撤下，换成《渡口》12 分钟版，总时长缩短 9 分钟。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-01">11月1日</time>
+          <div><strong>11月片单页上线</strong><span>共 38 部、126 场，新增“版本”一列，标注单版本、双版本、三版本。</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sec" id="channels">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">CHANNELS</span>
+          <h2>分类入口：按你真正会搜的词找片</h2>
+        </div>
+        <span class="note">10 个频道</span>
+      </div>
+      <p class="intro">频道按“检索习惯”划分，不按类型学分类。一个片子可能同时落在修复片和悬疑片里，入口只负责把你带到条目页，不重复收录。</p>
+      <div class="channels">
+        <a href="/#picks">4K修复放映 <span class="cnt">9</span></a>
+        <a href="/#deep">导演剪辑版 <span class="cnt">5</span></a>
+        <a href="/#picks">粤语原声场 <span class="cnt">7</span></a>
+        <a href="/#picks">35mm胶片版 <span class="cnt">3</span></a>
+        <a href="/#guide">中文字幕组对比 <span class="cnt">6</span></a>
+        <a href="/#comments">冷门悬疑片 <span class="cnt">8</span></a>
+        <a href="/#picks">家庭题材长片 <span class="cnt">4</span></a>
+        <a href="/#updates">短片合辑场 <span class="cnt">5</span></a>
+        <a href="/#faq">映后谈与导赏 <span class="cnt">6</span></a>
+        <a href="/#guide">片尾彩蛋与删减 <span class="cnt">12</span></a>
+      </div>
+    </section>
+
+    <section class="sec" id="deep">
+      <div class="deep">
+        <span class="sec-kicker">IN-DEPTH</span>
+        <h2>深度解析：修复版不等于更好的版本</h2>
+        <p class="byline">核对来源：11月7日场次表、修复团队公开说明、3 位字幕校对的映后记录</p>
+
+        <p>11月的片单里，带“修复版”字样的有 9 部，占全部条目的近四分之一。把它当成质量保证是一种误读。修复解决的是介质老化，不解决当年拍摄时的曝光与收音问题；有些片子修完更清楚，也更清楚地暴露了原片的短板。</p>
+
+        <h3>《雾港旧事》：4K 修复赢在暗部，输在一处高频</h3>
+        <p>10月31日的修复说明写着，母版来自 1997 年的中间正片，扫描分辨率 4K，去噪强度设为低档。对照 35mm 版看，第 23 分钟的码头夜戏里，4K 版能看清仓库墙上的告示牌文字，35mm 版只剩轮廓。这是具体收益，可以逐帧核对。</p>
+        <p>但第 61 分钟的雨声段落，4K 版把高频削得比 35mm 版更平。修复团队在 11月2日的问答里承认做过一次降噪处理，理由是“原声底噪接近 -38dB”。这句话值得记住：降噪是取舍，不是复原。想听雨声质感的，35mm 版反而更接近当年影院。</p>
+
+        <div class="fact">
+          <b>可核对项：</b>《雾港旧事》4K 版第 23 分钟可见告示牌 8 个汉字；35mm 版同帧仅可辨 3 个。第 61 分钟雨声段，4K 版频谱在 12kHz 以上衰减明显。
+        </div>
+
+        <h3>《雪线以南》：画幅不同，叙事重心跟着动</h3>
+        <p>这部片子的两个版本常被说成“加长版与标准版”，不准确。实际差异是画幅：35mm 扫描版为 1.66:1，数字版裁切为 1.85:1。裁切发生在画面上方，雪山天际线被压掉约 12%。导演在 11月5日的映后谈里说，这 12% 是“片子呼吸的地方”，措辞被现场 2 位观众记录，转述可能不完整。</p>
+        <p>片尾多出的 41 秒静帧是另一件事。它不是新内容，而是原版片尾字幕滚完后的定格。把它当成“隐藏结局”是误传；目前没有发行方声明支持这种说法，属于观众推测。</p>
+
+        <table class="compare">
+          <thead>
+            <tr><th>对比项</th><th>35mm 扫描版</th><th>数字 2K 版</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>画幅</td><td class="yes">1.66:1</td><td>1.85:1</td></tr>
+            <tr><td>片尾</td><td class="yes">含 41 秒静帧</td><td class="no">无</td></tr>
+            <tr><td>场次（11月7日）</td><td class="no">2 场</td><td class="yes">4 场</td></tr>
+            <tr><td>颗粒感</td><td class="yes">保留明显</td><td>轻度平滑</td></tr>
+          </tbody>
+        </table>
+
+        <h3>《第三码头》：导剪版补的不是情节，是空间</h3>
+        <p>三个版本时长分别是 114、132、126 分钟。多出的 18 分钟集中在码头调度段落，没有新增对白，主要是环境声与走动镜头。看院线版会觉得反派动机突然，导剪版里那段调度给出的是时间压力：从 02:14 到 02:32，调度台上的钟走了 18 分钟，人物一直在同一个位置等。</p>
+        <blockquote>“院线版把等的那段剪了，观众就不知道他们在等什么。”——11月4日映后谈现场记录，说话者为该片剪辑助理，原话转述。</blockquote>
+        <p>电视版 126 分钟介于两者之间，但把一段争吵戏改成画外音。如果只想看一次，导剪版信息最完整；如果在意节奏，院线版 114 分钟更紧凑。这是取舍，没有唯一答案。</p>
+
+        <h3>判断方法：三步核对一个“修复版”值不值</h3>
+        <ol class="checklist">
+          <li><b>先查母版来源。</b>原始负片、中间正片、放映拷贝三种来源的修复上限不同，说明里写“中间正片”的，别期待负片级细节。</li>
+          <li><b>再看处理日志。</b>有降噪、有裁切、有帧率转换的，逐条对照原版，看改动落在哪个时间段。</li>
+          <li><b>最后对场次。</b>版本再好，一周 2 场也可能排不进去；版本一般的片子，场次密度高，反而更适合先看。</li>
+        </ol>
+        <p>这三步不需要专业设备，11月7日的场次表已经列出母版类型和处理说明。核对成本大约 10 分钟，比看错版本后再补一次低得多。</p>
+      </div>
+    </section>
+
+    <section class="sec" id="guide">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">EXPERIENCE GUIDE</span>
+          <h2>体验指南：一场放映从选座到散场的顺序</h2>
+        </div>
+        <span class="note">适合第一次看修复放映的人</span>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>选场次：先看版本，再看时间</h3>
+          <p>同一部片子的不同版本不共用影厅。11月7日《雾港旧事》的粤语原声场在 3 号厅，国语配音场在 5 号厅，座位数相差 40 个。买票前确认版本编号，比抢中间座位更重要。</p>
+          <p>晚场通常配映后谈，时长 20 到 30 分钟，散场时间会顺延。带小孩或赶末班车的，避开带“映后”标记的场次。</p>
+        </div>
+        <div class="card">
+          <h3>选座位：画幅决定边角价值</h3>
+          <p>1.66:1 的片子在宽银幕厅会左右留黑边，靠边座位损失更小。1.85:1 的片子尽量选中间偏后，前 3 排看字幕要抬头。字幕行数多的版本，后排更舒服。</p>
+          <p>修复放映的暗部细节多，坐在过道边会受安全灯干扰，第 61 分钟那种雨夜段落尤其明显。</p>
+        </div>
+        <div class="card">
+          <h3>看片前：花 5 分钟读备注</h3>
+          <p>场次备注里会写三样东西：母版类型、音轨语言、字幕组编号。11月6日起，《春分之后》的备注已标 A/B 组，A 组把“叔公”译成“uncle”，想保留方言感的选 B 组。</p>
+          <p>备注不写“推荐”二字，只陈述差异。看完再判断哪个版本合口味，比先入为主可靠。</p>
+        </div>
+        <div class="card">
+          <h3>散场后：记一条可核对的信息</h3>
+          <p>把版本、场次、你注意到的具体一处差异记下来，比如“第 23 分钟告示牌可辨 8 字”。这类记录积累到 5 条，选片判断会明显变快。</p>
+          <p>评论区接受带场次编号的短评，不带编号的观感也收，但会单独标注为“主观感受”。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="faq">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">FAQ</span>
+          <h2>常见问题：版本、场次与字幕</h2>
+        </div>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>4K修复版的画面一定比35mm版清楚吗？</summary>
+          <div class="ans">不一定。修复提升的是分辨率与暗部可辨度，但降噪会削掉高频细节。《雾港旧事》4K 版第 23 分钟告示牌可辨 8 个汉字，35mm 版只有 3 个；可第 61 分钟雨声段，35mm 版的高频更完整。清楚与否要分段落看。</div>
+        </details>
+        <details>
+          <summary>导演剪辑版多出来的18分钟值不值得等？</summary>
+          <div class="ans">《第三码头》的 18 分钟集中在码头调度，没有新增对白，补的是时间压力与空间关系。院线版把这段压到 4 分钟，反派动机因此显得突然。如果只打算看一次，导剪版信息更完整；在意片长的，114 分钟院线版节奏更紧。</div>
+        </details>
+        <details>
+          <summary>中文字幕组A和B的差别在哪里？</summary>
+          <div class="ans">《春分之后》的 A 组把“叔公”译作“uncle”，B 组保留方言拼写；称谓差异影响的是家庭关系远近的感知。11月6日起场次备注标注组别编号，买票时可对照。两组都不算错译，是取向不同。</div>
+        </details>
+        <details>
+          <summary>片尾多出的41秒静帧是隐藏结局吗？</summary>
+          <div class="ans">不是。《雪线以南》35mm 扫描版片尾的 41 秒是字幕滚完后的定格画面，没有新增情节。把它说成“隐藏结局”目前没有发行方声明支持，属于观众推测。想看这段的，只能选 35mm 版，11月7日当周仅 2 场。</div>
+        </details>
+        <details>
+          <summary>粤语原声场和国语配音场该选哪个？</summary>
+          <div class="ans">《夜班电车》国语版改写了 2 处方言台词，分别在第 47 分钟和第 78 分钟，发行方理由为“便于普适理解”。想听原话的选粤语轨，字幕行数多 7 行；带长辈看、更习惯国语的，国语版理解成本更低。两个版本不共用影厅。</div>
+        </details>
+        <details>
+          <summary>场次备注里的“母版类型”有什么用？</summary>
+          <div class="ans">母版决定修复上限。原始负片、中间正片、放映拷贝三种来源，细节保留程度依次下降。《雾港旧事》用的是 1997 年中间正片，所以 4K 扫描在暗部有收益，但到不了负片级。备注写清母版，等于提前告诉你天花板在哪。</div>
+        </details>
+      </div>
+    </section>
+
+    <section class="sec" id="comments">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">AUDIENCE</span>
+          <h2>影迷评论：带场次编号的实评</h2>
+        </div>
+        <span class="note">11月1日 — 11月7日，共收录 26 条</span>
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <div class="who"><span class="avatar">林</span>林间雨 · 11月7日 3号厅</div>
+          <p><span class="ref">《雾港旧事》4K版</span> 第 23 分钟那块告示牌真的看清了，八个字一个不差。但后面雨声确实闷，跟我去年看的 35mm 版比少了点锐度。不后悔，两版各有各的用处。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">陈</span>陈小满 · 11月6日 5号厅</div>
+          <p><span class="ref">《春分之后》B组字幕</span> 选 B 组是对的，“叔公”没被译成 uncle，家里老人看的时候点头了。A 组据说更顺，但那种顺是把关系拉远了。</p>
+        </div>
+        <div class="comment neg">
+          <div class="who"><span class="avatar">周</span>周末不加班 · 11月5日 2号厅</div>
+          <p><span class="ref">《雪线以南》数字版</span> 看完有点亏。宣传说加长，其实数字版根本没那段静帧，画幅也被裁了。早知直接等 35mm 那两场。排片太少了，一周两场谁抢得到。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">吴</span>吴岸 · 11月5日 1号厅</div>
+          <p><span class="ref">《第三码头》导剪版</span> 18 分钟的码头调度不是废戏，调度台上的钟从 02:14 走到 02:32，人物一直在同一个位置等。院线版剪掉之后，反派的急就显得没来由。这条我认。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">何</span>何夕 · 11月4日 4号厅</div>
+          <p><span class="ref">《夜班电车》粤语原声</span> 第 47 分钟那句方言，国语版改得意思偏了，原话带一点揶揄。字幕多 7 行不影响观看，反而解释了几个称呼的来历。值。</p>
+        </div>
+        <div class="comment neg">
+          <div class="who"><span class="avatar">赵</span>赵一舟 · 11月3日 6号厅</div>
+          <p><span class="ref">《两盏灯》合辑</span> 第三部换成《渡口》12分钟版，总时长少了 9 分钟，但我更喜欢原来的《潮间带》。合辑换片这种事提前一周才说，日程都排好了。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">孙</span>孙可 · 11月2日 3号厅</div>
+          <p>对修复放映没什么特别偏好，清楚就行。倒是映后谈里那位字幕校对讲的“降噪是取舍”，比片子本身让我印象深。可惜这类活动一周只有两场。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="news">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">NEWS</span>
+          <h2>相关资讯：发行与修复的动向</h2>
+        </div>
+      </div>
+      <ul class="news">
+        <li><time datetime="2026-11-07">11月7日</time><b>修复团队公布《雾港旧事》处理日志</b>，列出降噪强度、扫描分辨率与三处人工修补的时间点，其中第 61 分钟的音频处理被单独说明。</li>
+        <li><time datetime="2026-11-06">11月6日</time><b>《雪线以南》发行方回应画幅争议</b>，称数字版裁切“为适配主流影厅”，未回应是否补发 1.66:1 数字版。35mm 扫描版当周加映 2 场。</li>
+        <li><time datetime="2026-11-04">11月4日</time><b>《夜班电车》台词修订说明公开</b>，两处方言改写均附原文与改写理由，发行方称后续场次沿用现有音轨，不再调整。</li>
+        <li><time datetime="2026-11-02">11月2日</time><b>《两盏灯》合辑版权变动</b>，《潮间带》因授权到期撤下，替换为《渡口》12 分钟版，已购票观众可改签或退票，窗口开放至 11月10日。</li>
+      </ul>
+    </section>
+
+    <section class="sec" id="recommend">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">RELATED</span>
+          <h2>相关推荐：接下来可以查的关键词</h2>
+        </div>
+      </div>
+      <div class="rec-tags">
+        <a href="/#deep">雾港旧事4K修复对比</a>
+        <a href="/#picks">雪线以南35mm放映</a>
+        <a href="/#deep">第三码头导剪版18分钟</a>
+        <a href="/#faq">春分之后字幕组差异</a>
+        <a href="/#guide">修复版选座建议</a>
+        <a href="/#updates">夜班电车音轨修订</a>
+        <a href="/#picks">两盏灯短片合辑顺序</a>
+        <a href="/#guide">映后谈时间安排</a>
+        <a href="/#comments">粤语原声场实评</a>
+        <a href="/#faq">母版类型怎么看</a>
+      </div>
+    </section>
+
+    <section class="sec" id="timeline">
+      <div class="sec-head">
+        <div>
+          <span class="sec-kicker">TIMELINE</span>
+          <h2>补充板块：11月片单的关键节点</h2>
+        </div>
+        <span class="note">按可核对日期排列</span>
+      </div>
+      <ol class="timeline">
+        <li><time datetime="2026-11-01">11月1日</time><b>38 部片、126 场片单上线</b>，新增“版本”列，单版本 27 部、双版本 9 部、三版本 2 部。</li>
+        <li><time datetime="2026-11-02">11月2日</time><b>《两盏灯》合辑换片</b>，《潮间带》撤下，《渡口》12 分钟版补位，总时长从 83 分钟变为 74 分钟。</li>
+        <li><time datetime="2026-11-04">11月4日</time><b>《夜班电车》修订说明发布</b>，两处方言改写位置：第 47 分钟、第 78 分钟。</li>
+        <li><time datetime="2026-11-05">11月5日</time><b>《雪线以南》35mm 版加映 2 场</b>，与数字版分厅放映，画幅差异为 1.66:1 对 1.85:1。</li>
+        <li><time datetime="2026-11-06">11月6日</time><b>《春分之后》字幕组编号公示</b>，A/B 两组自本日起在备注中标出。</li>
+        <li><time datetime="2026-11-07">11月7日</time><b>《雾港旧事》粤语原声场上线</b>，场次由 3 增至 6，含 2 场映后修复说明。</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <aside aria-label="侧栏导航与榜单">
+    <div class="side-card" style="position:sticky;top:calc(var(--sticky) + 10px)">
+      <h3>本页栏目</h3>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选片单</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">影迷评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+        <li><a href="/#timeline">关键节点</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h3>本周版本密度榜</h3>
+      <ol class="rank-list">
+        <li><a href="/#picks">第三码头</a><small>3 个版本 · 导剪 132 分钟</small></li>
+        <li><a href="/#picks">雾港旧事</a><small>2 个版本 · 4K / 35mm</small></li>
+        <li><a href="/#picks">雪线以南</a><small>2 个版本 · 画幅不同</small></li>
+        <li><a href="/#picks">夜班电车</a><small>2 个版本 · 双语音轨</small></li>
+        <li><a href="/#picks">春分之后</a><small>2 个版本 · 字幕组不同</small></li>
+      </ol>
+    </div>
+    <div class="side-card">
+      <h3>场次速查</h3>
+      <ul class="side-list">
+        <li><a href="/#updates">11月7日 晚场 3 场</a><small>含《雾港旧事》映后谈</small></li>
+        <li><a href="/#updates">11月8日 下午场 2 场</a><small>《雪线以南》35mm 版</small></li>
+        <li><a href="/#faq">字幕组编号查询</a><small>《春分之后》A / B 组</small></li>
+        <li><a href="/#guide">映后谈日程</a><small>本周共 6 场，均 20 分钟</small></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f2b84b"/>
+            <circle cx="32" cy="32" r="15" fill="none" stroke="#1b2433" stroke-width="4"/>
+            <circle cx="32" cy="32" r="5" fill="#1b2433"/>
+          </svg>
+          zxfuli福利社电影
+        </div>
+        <p>把版本差异、场次密度与字幕来源摆到同一张表上，选片先核对，再决定看哪一场。</p>
+      </div>
+      <div>
+        <h4>片单</h4>
+        <ul class="foot-links">
+          <li><a href="/#picks">本周精选片单</a></li>
+          <li><a href="/#updates">最新场次更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#timeline">11月关键节点</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读</h4>
+        <ul class="foot-links">
+          <li><a href="/#deep">修复版深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">影迷评论</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul class="foot-links">
+          <li><a href="/#overview">数据口径与抽样</a></li>
+          <li><a href="/#recommend">相关关键词</a></li>
+          <li><a href="/#news">发行与修复动向</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>片单、场次、版本与评论均为示例数据，用于展示页面结构，不构成实际放映信息。更新时间 2026-11-08，对应正文“最新更新”板块 11月1日至11月7日的 6 条可核对变动。</span>
+      <span>© 2026 zxfuli福利社电影 · 示例页面</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"zxfuli福利社电影",
+  "description":"围绕独立片、修复版与冷门资源的观影选片手册，整理放映场次、版本差异、字幕来源与影迷实评。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"4K修复版的画面一定比35mm版清楚吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。修复提升分辨率与暗部可辨度，但降噪会削掉高频细节。《雾港旧事》4K版第23分钟告示牌可辨8个汉字，35mm版只有3个；第61分钟雨声段，35mm版高频更完整。"}},
+    {"@type":"Question","name":"导演剪辑版多出来的18分钟值不值得等？","acceptedAnswer":{"@type":"Answer","text":"《第三码头》的18分钟集中在码头调度，补的是时间压力与空间关系。院线版压到4分钟，反派动机因此显得突然。只看一次的话导剪版信息更完整。"}},
+    {"@type":"Question","name":"中文字幕组A和B的差别在哪里？","acceptedAnswer":{"@type":"Answer","text":"《春分之后》A组把“叔公”译作“uncle”，B组保留方言拼写。11月6日起场次备注标注组别编号，两组都不算错译，是取向不同。"}},
+    {"@type":"Question","name":"片尾多出的41秒静帧是隐藏结局吗？","acceptedAnswer":{"@type":"Answer","text":"不是。《雪线以南》35mm扫描版片尾的41秒是字幕滚完后的定格画面，没有新增情节。称其为隐藏结局目前没有发行方声明支持，属于观众推测。"}},
+    {"@type":"Question","name":"粤语原声场和国语配音场该选哪个？","acceptedAnswer":{"@type":"Answer","text":"《夜班电车》国语版改写了2处方言台词，第47分钟与第78分钟各一处。想听原话选粤语轨，字幕多7行；更习惯国语的选国语版。"}},
+    {"@type":"Question","name":"场次备注里的“母版类型”有什么用？","acceptedAnswer":{"@type":"Answer","text":"母版决定修复上限。原始负片、中间正片、放映拷贝三种来源细节保留依次下降。《雾港旧事》用1997年中间正片，4K扫描在暗部有收益但到不了负片级。"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.matchMedia('(max-width:900px)').matches){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var input=document.getElementById('siteSearch');
+  var box=document.getElementById('searchResult');
+  var items=[
+    {t:'雾港旧事 4K修复版',k:'4K 修复 粤语原声 35mm 告示牌 第23分钟',h:'/#picks'},
+    {t:'雪线以南 35mm扫描版',k:'画幅 1.66 静帧 41秒 片尾',h:'/#deep'},
+    {t:'第三码头 导演剪辑版',k:'132分钟 码头调度 18分钟 院线版',h:'/#deep'},
+    {t:'夜班电车 粤语原声',k:'方言台词 第47分钟 第78分钟 音轨',h:'/#updates'},
+    {t:'春分之后 字幕组A/B',k:'字幕 叔公 uncle 方言',h:'/#faq'},
+    {t:'两盏灯 短片合辑',k:'渡口 潮间带 12分钟 顺序',h:'/#updates'},
+    {t:'修复版选座建议',k:'画幅 选座 黑边 字幕行',h:'/#guide'},
+    {t:'母版类型怎么看',k:'负片 中间正片 放映拷贝 扫描',h:'/#faq'},
+    {t:'映后谈时间安排',k:'映后 导赏 20分钟 场次',h:'/#guide'},
+    {t:'11月片单关键节点',k:'时间线 11月1日 11月7日 片单',h:'/#timeline'}
+  ];
+  function render(q){
+    if(!box)return;
+    q=q.trim();
+    if(!q){box.classList.remove('show');box.innerHTML='';return;}
+    var res=items.filter(function(it){
+      return it.t.indexOf(q)>-1||it.k.indexOf(q)>-1;
+    });
+    if(res.length){
+      box.innerHTML=res.slice(0,6).map(function(it){
+        return '<a href="'+it.h+'">'+it.t+'</a>';
+      }).join('');
+    }else{
+      box.innerHTML='<div class="empty">没有匹配条目。试试“修复”“35mm”“字幕”或片名片段。</div>';
+    }
+    box.classList.add('show');
+  }
+  if(input){
+    input.addEventListener('input',function(){render(input.value);});
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){input.value='';render('');input.blur();}
+    });
+    document.addEventListener('click',function(e){
+      if(box&&!box.contains(e.target)&&e.target!==input){box.classList.remove('show');}
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(!toTop)return;
+    if(window.scrollY>420){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+    highlight();
+  }
+  if(toTop){
+    toTop.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var secs=sideLinks.map(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  function highlight(){
+    var pos=window.scrollY+140;
+    var idx=-1;
+    for(var i=0;i<secs.length;i++){
+      if(secs[i].offsetTop<=pos){idx=i;}
+    }
+    sideLinks.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+})();
+</script>
+</body>
+          </html>
